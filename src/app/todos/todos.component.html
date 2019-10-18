@@ -1,0 +1,24 @@
+
+<div *ngIf="appState == 'default'">
+  <h3>Add Todo</h3>
+  <form (submit)="addTodo()">
+  <input class="form-control" type="text" [(ngModel)]="text" name="text">
+  </form>
+</div>
+
+<div *ngIf="appState == 'edit'">
+  <h3>Update Todo</h3>
+  <form (submit)="updateTodo()">
+  <input type="text" [(ngModel)]="text" name="text" class="form-control">
+  </form>
+</div>
+
+
+<h3>Todo List</h3>
+<ul *ngFor="let todo of todos"  class="list-group">
+    <li class="list-group-item">
+      <span (click)="editTodo(todo)" style="cursor:pointer">{{ todo.text }}</span>
+     <button (click)="deleteTodo(this.text)" class="btn btn-danger btn-tiny">X</button>
+  </li>
+  <br>
+ </ul>
