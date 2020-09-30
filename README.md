@@ -1,4 +1,5 @@
 # TodoApp
+This is basic To Do app ,build in angular ,this app helful for beginners,whose want to learn angular with better understanding.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.4.
 
